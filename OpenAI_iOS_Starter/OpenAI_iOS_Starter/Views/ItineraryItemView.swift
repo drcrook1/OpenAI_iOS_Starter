@@ -18,6 +18,7 @@ struct ItineraryItemView: View {
                 Text("\(item.dateAsString)")
                 Text("\(item.timeAsString)")
             }
+            Text("\(item.notes)").padding(14)
         }
     }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @Binding var excursions: [Excursion]
+    @State private var addExcursion = Excursion.empty
+    @State private var isPresentingEditView = false
     
     var body: some View {
         NavigationStack{
@@ -20,8 +22,29 @@ struct HomeView: View {
             }
             .navigationTitle("Upcoming Excursions")
             .toolbar {
-                Button(action: {}){
-                    Image(systemName: "plus")
+                    Button(action: {isPresentingEditView = true}){
+                        Image(systemName: "plus")
+                    }
+            }
+            .sheet(isPresented: $isPresentingEditView) {
+                NavigationStack {
+                    ExcursionCreateView(excursion: $addExcursion)
+                        .navigationTitle("New Excursion")
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Cancel") {
+                                    isPresentingEditView = false
+                                    addExcursion = Excursion.empty
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Add") {
+                                    isPresentingEditView = false
+                                    excursions.append(addExcursion)
+                                    addExcursion = Excursion.empty
+                                }
+                            }
+                        }
                 }
             }
         }

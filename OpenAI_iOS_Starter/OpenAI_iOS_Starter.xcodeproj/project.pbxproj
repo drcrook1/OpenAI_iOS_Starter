@@ -24,6 +24,10 @@
 		1C33DC622A2FA253003091FD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC612A2FA253003091FD /* Location.swift */; };
 		1C33DC642A2FACCA003091FD /* ItineraryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC632A2FACCA003091FD /* ItineraryItemView.swift */; };
 		1C33DC662A2FB380003091FD /* ItineraryItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC652A2FB380003091FD /* ItineraryItemCardView.swift */; };
+		1C33DC6D2A30D259003091FD /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC6C2A30D259003091FD /* FloatingTextField.swift */; };
+		1C33DC712A30D52C003091FD /* FloatingDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC702A30D52C003091FD /* FloatingDatePicker.swift */; };
+		1C33DC732A30DBA5003091FD /* FloatingTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC722A30DBA5003091FD /* FloatingTimePicker.swift */; };
+		1C33DC752A311A20003091FD /* ExcursionCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC742A311A20003091FD /* ExcursionCreateView.swift */; };
 		1CCADCC52A2E593100EE2457 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCADCC42A2E593100EE2457 /* HomeView.swift */; };
 		1CCADCC72A2E74B300EE2457 /* ExcursionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +70,10 @@
 		1C33DC612A2FA253003091FD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1C33DC632A2FACCA003091FD /* ItineraryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryItemView.swift; sourceTree = "<group>"; };
 		1C33DC652A2FB380003091FD /* ItineraryItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryItemCardView.swift; sourceTree = "<group>"; };
+		1C33DC6C2A30D259003091FD /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		1C33DC702A30D52C003091FD /* FloatingDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingDatePicker.swift; sourceTree = "<group>"; };
+		1C33DC722A30DBA5003091FD /* FloatingTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTimePicker.swift; sourceTree = "<group>"; };
+		1C33DC742A311A20003091FD /* ExcursionCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionCreateView.swift; sourceTree = "<group>"; };
 		1CCADCC42A2E593100EE2457 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +127,7 @@
 		1C194A1B2A2A497400DBECAF /* OpenAI_iOS_Starter */ = {
 			isa = PBXGroup;
 			children = (
+				1C33DC692A30CDA7003091FD /* UIComponents */,
 				1C33DC672A2FC446003091FD /* Views */,
 				1C194A462A2A4F8D00DBECAF /* Models */,
 				1C194A1C2A2A497400DBECAF /* OpenAI_iOS_StarterApp.swift */,
@@ -168,7 +177,7 @@
 		1C33DC672A2FC446003091FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1C33DC682A2FC47C003091FD /* EditViews */,
+				1C33DC682A2FC47C003091FD /* CRUDviews */,
 				1C194A4B2A2A513B00DBECAF /* ExcursionCardView.swift */,
 				1C33DC652A2FB380003091FD /* ItineraryItemCardView.swift */,
 				1CCADCC42A2E593100EE2457 /* HomeView.swift */,
@@ -179,12 +188,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1C33DC682A2FC47C003091FD /* EditViews */ = {
+		1C33DC682A2FC47C003091FD /* CRUDviews */ = {
 			isa = PBXGroup;
 			children = (
 				1C33DC532A2F6661003091FD /* ExcursionEditView.swift */,
+				1C33DC742A311A20003091FD /* ExcursionCreateView.swift */,
 			);
-			path = EditViews;
+			path = CRUDviews;
+			sourceTree = "<group>";
+		};
+		1C33DC692A30CDA7003091FD /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				1C33DC6C2A30D259003091FD /* FloatingTextField.swift */,
+				1C33DC702A30D52C003091FD /* FloatingDatePicker.swift */,
+				1C33DC722A30DBA5003091FD /* FloatingTimePicker.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,13 +337,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C33DC732A30DBA5003091FD /* FloatingTimePicker.swift in Sources */,
 				1C33DC5C2A2F7C1F003091FD /* ScrumProgressViewStyle.swift in Sources */,
 				1C33DC622A2FA253003091FD /* Location.swift in Sources */,
 				1C33DC642A2FACCA003091FD /* ItineraryItemView.swift in Sources */,
+				1C33DC712A30D52C003091FD /* FloatingDatePicker.swift in Sources */,
 				1C33DC602A2F931E003091FD /* ItineraryItem.swift in Sources */,
 				1C194A4A2A2A50EC00DBECAF /* Excursion.swift in Sources */,
 				1CCADCC72A2E74B300EE2457 /* ExcursionView.swift in Sources */,
 				1C33DC662A2FB380003091FD /* ItineraryItemCardView.swift in Sources */,
+				1C33DC752A311A20003091FD /* ExcursionCreateView.swift in Sources */,
 				1C33DC542A2F6661003091FD /* ExcursionEditView.swift in Sources */,
 				1C194A4E2A2A579A00DBECAF /* TrailingIconLabelStyle.swift in Sources */,
 				1C194A482A2A4FAB00DBECAF /* Theme.swift in Sources */,
@@ -331,6 +354,7 @@
 				1C194A1D2A2A497400DBECAF /* OpenAI_iOS_StarterApp.swift in Sources */,
 				1C33DC562A2F6C56003091FD /* ThemeView.swift in Sources */,
 				1C194A4C2A2A513B00DBECAF /* ExcursionCardView.swift in Sources */,
+				1C33DC6D2A30D259003091FD /* FloatingTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

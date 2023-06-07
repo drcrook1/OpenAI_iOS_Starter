@@ -55,9 +55,9 @@ extension Excursion {
         Excursion(title: "Custer Day 1",
                   date: Date.nowPlusComponents(days: 7),
                    itinerary: [
-                    ItineraryItem(title: "Homeschool Activity", date: Date.nowPlusComponents(hour: 8, days: 7), location: Location(title: "Crazy Horse Memorial", address: "Crazy Horse, SD 57730"), theme: .bubblegum),
-                    ItineraryItem(title: "Lunch", date: Date.nowPlusComponents(hour: 12, days: 7), location: Location(title: "Black Hills Bistro", address: "148 Main St, Hill City, SD 57745"), theme: .bubblegum),
-                    ItineraryItem(title: "1800s Train Ride", date: Date.nowPlusComponents(hour: 14, days: 7), location: Location(title: "Keystone Depot", address: "103 Winter St, Keystone, SD 57751"), theme: .bubblegum)
+                    ItineraryItem(title: "Homeschool Activity", date: Date.nowPlusComponents(hour: 8, days: 7), notes: "neat.  This will be a very long note about how we are going to see the reservation, and learn about crazy horse and how we need to meet another group about 45 minutes into the adventure and that soembody was wearing a funny hat.", location: Location(title: "Crazy Horse Memorial", address: "Crazy Horse, SD 57730"), theme: .bubblegum),
+                    ItineraryItem(title: "Lunch", date: Date.nowPlusComponents(hour: 12, days: 7), notes: "neat", location: Location(title: "Black Hills Bistro", address: "148 Main St, Hill City, SD 57745"), theme: .bubblegum),
+                    ItineraryItem(title: "1800s Train Ride", date: Date.nowPlusComponents(hour: 14, days: 7), notes: "", location: Location(title: "Keystone Depot", address: "103 Winter St, Keystone, SD 57751"), theme: .bubblegum)
                    ],
                    theme: .bubblegum),
         Excursion(title: "Boone, NC | Day 2",

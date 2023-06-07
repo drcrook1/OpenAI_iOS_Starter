@@ -18,3 +18,9 @@ struct Location: Identifiable {
             self.address = address
         }
 }
+
+extension Location {
+    static var empty: Location {
+        Location(title: "", address: "")
+    }
+}

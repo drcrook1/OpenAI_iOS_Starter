@@ -12,6 +12,7 @@ struct ItineraryItem : Identifiable {
     var title: String
     var date: Date
     var location: Location
+    var notes: String
     var theme: Theme
     var dateAsString: String {
         get {
@@ -28,11 +29,18 @@ struct ItineraryItem : Identifiable {
         }
     }
     
-    init(id: UUID = UUID(), title: String, date: Date, location: Location, theme: Theme) {
+    init(id: UUID = UUID(), title: String, date: Date, notes: String, location: Location, theme: Theme) {
             self.id = id
             self.title = title
             self.date = date
             self.location = location
             self.theme = theme
+            self.notes = notes
         }
+}
+
+extension ItineraryItem {
+    static var empty: ItineraryItem {
+        ItineraryItem(title: "", date: Date.now, notes: "", location: Location.empty, theme: .sky)
+    }
 }

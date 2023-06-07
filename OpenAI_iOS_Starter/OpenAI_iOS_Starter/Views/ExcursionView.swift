@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExcursionView: View {
-    
+    @Environment(\.editMode) private var editMode
     @Binding var excursion: Excursion
     
     @State private var isPresentingEditView = false
@@ -30,9 +30,11 @@ struct ExcursionView: View {
 
         }
         .toolbar {
-            Button("Edit") {
-                isPresentingEditView = true
-                editingExcursion = excursion
+            ZStack {
+                Button("Edit") {
+                    isPresentingEditView = true
+                    editingExcursion = excursion
+                }
             }
         }
         .sheet(isPresented: $isPresentingEditView) {

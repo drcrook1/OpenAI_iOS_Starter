@@ -28,7 +28,7 @@ struct HomeView: View {
             }
             .sheet(isPresented: $isPresentingEditView) {
                 NavigationStack {
-                    ExcursionCreateView(excursion: $addExcursion)
+                    ExcursionEditView(excursion: $addExcursion)
                         .navigationTitle("New Excursion")
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {

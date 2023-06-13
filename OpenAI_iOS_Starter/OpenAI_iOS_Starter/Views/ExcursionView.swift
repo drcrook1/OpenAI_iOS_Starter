@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ExcursionView: View {
-    @Environment(\.editMode) private var editMode
     @Binding var excursion: Excursion
     
     @State private var isPresentingEditView = false
@@ -59,7 +58,7 @@ struct ExcursionView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
+struct ExcursionView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             ExcursionView(excursion: .constant(Excursion.sampleData[0]))

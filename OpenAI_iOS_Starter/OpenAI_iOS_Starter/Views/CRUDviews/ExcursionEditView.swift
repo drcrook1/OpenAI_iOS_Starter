@@ -29,7 +29,7 @@ struct ExcursionEditView: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
-                Text("Swipe Right to Delete Itinerary Items.")
+                Text("Swipe to Delete Itinerary Items.")
                     .foregroundColor(Color.red)
             }
             

@@ -27,7 +27,6 @@
 		1C33DC6D2A30D259003091FD /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC6C2A30D259003091FD /* FloatingTextField.swift */; };
 		1C33DC712A30D52C003091FD /* FloatingDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC702A30D52C003091FD /* FloatingDatePicker.swift */; };
 		1C33DC732A30DBA5003091FD /* FloatingTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC722A30DBA5003091FD /* FloatingTimePicker.swift */; };
-		1C33DC752A311A20003091FD /* ExcursionCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC742A311A20003091FD /* ExcursionCreateView.swift */; };
 		1CCADCC52A2E593100EE2457 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCADCC42A2E593100EE2457 /* HomeView.swift */; };
 		1CCADCC72A2E74B300EE2457 /* ExcursionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +72,6 @@
 		1C33DC6C2A30D259003091FD /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		1C33DC702A30D52C003091FD /* FloatingDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingDatePicker.swift; sourceTree = "<group>"; };
 		1C33DC722A30DBA5003091FD /* FloatingTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTimePicker.swift; sourceTree = "<group>"; };
-		1C33DC742A311A20003091FD /* ExcursionCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionCreateView.swift; sourceTree = "<group>"; };
 		1CCADCC42A2E593100EE2457 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				1C33DC532A2F6661003091FD /* ExcursionEditView.swift */,
-				1C33DC742A311A20003091FD /* ExcursionCreateView.swift */,
 			);
 			path = CRUDviews;
 			sourceTree = "<group>";
@@ -346,7 +343,6 @@
 				1C194A4A2A2A50EC00DBECAF /* Excursion.swift in Sources */,
 				1CCADCC72A2E74B300EE2457 /* ExcursionView.swift in Sources */,
 				1C33DC662A2FB380003091FD /* ItineraryItemCardView.swift in Sources */,
-				1C33DC752A311A20003091FD /* ExcursionCreateView.swift in Sources */,
 				1C33DC542A2F6661003091FD /* ExcursionEditView.swift in Sources */,
 				1C194A4E2A2A579A00DBECAF /* TrailingIconLabelStyle.swift in Sources */,
 				1C194A482A2A4FAB00DBECAF /* Theme.swift in Sources */,

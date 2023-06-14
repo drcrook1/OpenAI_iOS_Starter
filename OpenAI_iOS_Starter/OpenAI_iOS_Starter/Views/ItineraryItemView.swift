@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ItineraryItemView: View {
-    @Binding var item: ItineraryItem
+    let item: ItineraryItem
     var body: some View {
         VStack{
             Text("\(item.title)").bold()
@@ -26,6 +26,6 @@ struct ItineraryItemView: View {
 struct ItineraryItemView_Previews: PreviewProvider {
     static var previews: some View {
         let excursion = Excursion.sampleData[0]
-        ItineraryItemView(item: .constant(excursion.itinerary[0]))
+        ItineraryItemView(item: excursion.itinerary[0])
     }
 }

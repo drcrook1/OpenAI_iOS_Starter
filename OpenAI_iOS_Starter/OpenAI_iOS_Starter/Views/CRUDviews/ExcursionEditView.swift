@@ -33,19 +33,26 @@ struct ExcursionEditView: View {
                     .foregroundColor(Color.red)
             }
             
-            ForEach($excursion.itinerary) { item in
-                Section(header: Text("Itinerary Item")) {
-                    FloatingTextField(title: "Title", text: item.title)
-                    FloatingTimePicker(title: "Time", date: item.date)
-                    FloatingTextField(title: "Location Name", text: item.location.title)
-                    FloatingTextField(title: "Address", text: item.location.address)
-                    FloatingTextField(title: "Notes", text: item.notes, axis: .vertical)
-                }
+            ForEach(excursion.itinerary) { item in
+                ItineraryItemEditView(item:item)
             }
             .onDelete{ indexSet in
                 excursion.itinerary.remove(atOffsets: indexSet)
             }
         }//END FORM
+    }
+}
+
+struct ItineraryItemEditView : View {
+    @ObservedObject var item : ItineraryItem
+    var body: some View {
+        Section(header: Text("Itinerary Item")) {
+            FloatingTextField(title: "Title", text: $item.title)
+            FloatingTimePicker(title: "Time", date: $item.date)
+            FloatingTextField(title: "Location Name", text: $item.location.title)
+            FloatingTextField(title: "Address", text: $item.location.address)
+            FloatingTextField(title: "Notes", text: $item.notes, axis: .vertical)
+        }
     }
 }
 

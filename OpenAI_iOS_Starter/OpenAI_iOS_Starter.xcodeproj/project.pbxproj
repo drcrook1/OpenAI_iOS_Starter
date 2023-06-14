@@ -29,6 +29,8 @@
 		1C33DC732A30DBA5003091FD /* FloatingTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C33DC722A30DBA5003091FD /* FloatingTimePicker.swift */; };
 		1CCADCC52A2E593100EE2457 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCADCC42A2E593100EE2457 /* HomeView.swift */; };
 		1CCADCC72A2E74B300EE2457 /* ExcursionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */; };
+		1CED0B682A3A2C84003C9E4B /* GlobalAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B672A3A2C84003C9E4B /* GlobalAppState.swift */; };
+		1CED0B6A2A3A3CB7003C9E4B /* iAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B692A3A3CB7003C9E4B /* iAgentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		1C33DC722A30DBA5003091FD /* FloatingTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTimePicker.swift; sourceTree = "<group>"; };
 		1CCADCC42A2E593100EE2457 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionView.swift; sourceTree = "<group>"; };
+		1CED0B672A3A2C84003C9E4B /* GlobalAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppState.swift; sourceTree = "<group>"; };
+		1CED0B692A3A3CB7003C9E4B /* iAgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAgentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,11 +167,11 @@
 		1C194A462A2A4F8D00DBECAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1CED0B6C2A3A3EBB003C9E4B /* iAgent */,
+				1CED0B6B2A3A3E64003C9E4B /* Excursions */,
 				1C194A472A2A4FAB00DBECAF /* Theme.swift */,
-				1C194A492A2A50EC00DBECAF /* Excursion.swift */,
 				1C194A4D2A2A579A00DBECAF /* TrailingIconLabelStyle.swift */,
-				1C33DC5F2A2F931E003091FD /* ItineraryItem.swift */,
-				1C33DC612A2FA253003091FD /* Location.swift */,
+				1CED0B672A3A2C84003C9E4B /* GlobalAppState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +186,7 @@
 				1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */,
 				1C33DC632A2FACCA003091FD /* ItineraryItemView.swift */,
 				1C33DC552A2F6C56003091FD /* ThemeView.swift */,
+				1CED0B692A3A3CB7003C9E4B /* iAgentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +207,23 @@
 				1C33DC722A30DBA5003091FD /* FloatingTimePicker.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		1CED0B6B2A3A3E64003C9E4B /* Excursions */ = {
+			isa = PBXGroup;
+			children = (
+				1C33DC612A2FA253003091FD /* Location.swift */,
+				1C33DC5F2A2F931E003091FD /* ItineraryItem.swift */,
+				1C194A492A2A50EC00DBECAF /* Excursion.swift */,
+			);
+			path = Excursions;
+			sourceTree = "<group>";
+		};
+		1CED0B6C2A3A3EBB003C9E4B /* iAgent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iAgent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +362,8 @@
 				1C33DC642A2FACCA003091FD /* ItineraryItemView.swift in Sources */,
 				1C33DC712A30D52C003091FD /* FloatingDatePicker.swift in Sources */,
 				1C33DC602A2F931E003091FD /* ItineraryItem.swift in Sources */,
+				1CED0B6A2A3A3CB7003C9E4B /* iAgentView.swift in Sources */,
+				1CED0B682A3A2C84003C9E4B /* GlobalAppState.swift in Sources */,
 				1C194A4A2A2A50EC00DBECAF /* Excursion.swift in Sources */,
 				1CCADCC72A2E74B300EE2457 /* ExcursionView.swift in Sources */,
 				1C33DC662A2FB380003091FD /* ItineraryItemCardView.swift in Sources */,

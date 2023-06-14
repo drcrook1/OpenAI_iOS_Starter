@@ -8,7 +8,7 @@
 import Foundation
 
 struct Excursion: Identifiable {
-    let id: UUID
+    var id: UUID
     var title: String
     var date: Date
     var dateAsString: String {
@@ -33,6 +33,15 @@ struct Excursion: Identifiable {
 extension Excursion {
     static var empty: Excursion {
         Excursion(title: "", date: Date.now, itinerary: [], theme: .sky)
+    }
+}
+
+extension Excursion {
+    mutating func clear() {
+        self.id = UUID()
+        self.title = ""
+        self.date = Date.now
+        self.itinerary.removeAll()
     }
 }
 

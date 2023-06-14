@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct OpenAI_iOS_StarterApp: App {
-    @State private var excursions = Excursion.sampleData
+    @StateObject var appState = GlobalAppState()
     
     var body: some Scene {
         WindowGroup {
-            HomeView(excursions: $excursions)
+            HomeView().environmentObject(appState)
         }
     }
 }

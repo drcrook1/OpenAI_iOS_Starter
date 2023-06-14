@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ItineraryItem : Identifiable {
+class ItineraryItem : ObservableObject, Identifiable {
     let id: UUID
     var title: String
     var date: Date

@@ -31,6 +31,12 @@
 		1CCADCC72A2E74B300EE2457 /* ExcursionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */; };
 		1CED0B682A3A2C84003C9E4B /* GlobalAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B672A3A2C84003C9E4B /* GlobalAppState.swift */; };
 		1CED0B6A2A3A3CB7003C9E4B /* iAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B692A3A3CB7003C9E4B /* iAgentView.swift */; };
+		1CED0B6E2A3A426B003C9E4B /* ChatActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B6D2A3A426B003C9E4B /* ChatActor.swift */; };
+		1CED0B702A3A4280003C9E4B /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B6F2A3A4280003C9E4B /* ChatMessage.swift */; };
+		1CED0B722A3A4396003C9E4B /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B712A3A4396003C9E4B /* Conversation.swift */; };
+		1CED0B742A3A4533003C9E4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B732A3A4533003C9E4B /* Extensions.swift */; };
+		1CED0B782A3A497F003C9E4B /* MessageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B772A3A497F003C9E4B /* MessageCardView.swift */; };
+		1CED0B7A2A3A58AF003C9E4B /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CED0B792A3A58AF003C9E4B /* MessageInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,12 @@
 		1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionView.swift; sourceTree = "<group>"; };
 		1CED0B672A3A2C84003C9E4B /* GlobalAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppState.swift; sourceTree = "<group>"; };
 		1CED0B692A3A3CB7003C9E4B /* iAgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAgentView.swift; sourceTree = "<group>"; };
+		1CED0B6D2A3A426B003C9E4B /* ChatActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatActor.swift; sourceTree = "<group>"; };
+		1CED0B6F2A3A4280003C9E4B /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		1CED0B712A3A4396003C9E4B /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		1CED0B732A3A4533003C9E4B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1CED0B772A3A497F003C9E4B /* MessageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCardView.swift; sourceTree = "<group>"; };
+		1CED0B792A3A58AF003C9E4B /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +184,7 @@
 				1C194A472A2A4FAB00DBECAF /* Theme.swift */,
 				1C194A4D2A2A579A00DBECAF /* TrailingIconLabelStyle.swift */,
 				1CED0B672A3A2C84003C9E4B /* GlobalAppState.swift */,
+				1CED0B732A3A4533003C9E4B /* Extensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,24 +192,12 @@
 		1C33DC672A2FC446003091FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1C33DC682A2FC47C003091FD /* CRUDviews */,
-				1C194A4B2A2A513B00DBECAF /* ExcursionCardView.swift */,
-				1C33DC652A2FB380003091FD /* ItineraryItemCardView.swift */,
+				1CED0B762A3A4941003C9E4B /* iAgent */,
+				1CED0B752A3A490E003C9E4B /* Excursions */,
 				1CCADCC42A2E593100EE2457 /* HomeView.swift */,
-				1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */,
-				1C33DC632A2FACCA003091FD /* ItineraryItemView.swift */,
 				1C33DC552A2F6C56003091FD /* ThemeView.swift */,
-				1CED0B692A3A3CB7003C9E4B /* iAgentView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		1C33DC682A2FC47C003091FD /* CRUDviews */ = {
-			isa = PBXGroup;
-			children = (
-				1C33DC532A2F6661003091FD /* ExcursionEditView.swift */,
-			);
-			path = CRUDviews;
 			sourceTree = "<group>";
 		};
 		1C33DC692A30CDA7003091FD /* UIComponents */ = {
@@ -222,6 +223,31 @@
 		1CED0B6C2A3A3EBB003C9E4B /* iAgent */ = {
 			isa = PBXGroup;
 			children = (
+				1CED0B6D2A3A426B003C9E4B /* ChatActor.swift */,
+				1CED0B6F2A3A4280003C9E4B /* ChatMessage.swift */,
+				1CED0B712A3A4396003C9E4B /* Conversation.swift */,
+			);
+			path = iAgent;
+			sourceTree = "<group>";
+		};
+		1CED0B752A3A490E003C9E4B /* Excursions */ = {
+			isa = PBXGroup;
+			children = (
+				1CCADCC62A2E74B300EE2457 /* ExcursionView.swift */,
+				1C33DC632A2FACCA003091FD /* ItineraryItemView.swift */,
+				1C33DC652A2FB380003091FD /* ItineraryItemCardView.swift */,
+				1C194A4B2A2A513B00DBECAF /* ExcursionCardView.swift */,
+				1C33DC532A2F6661003091FD /* ExcursionEditView.swift */,
+			);
+			path = Excursions;
+			sourceTree = "<group>";
+		};
+		1CED0B762A3A4941003C9E4B /* iAgent */ = {
+			isa = PBXGroup;
+			children = (
+				1CED0B692A3A3CB7003C9E4B /* iAgentView.swift */,
+				1CED0B772A3A497F003C9E4B /* MessageCardView.swift */,
+				1CED0B792A3A58AF003C9E4B /* MessageInputView.swift */,
 			);
 			path = iAgent;
 			sourceTree = "<group>";
@@ -356,6 +382,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CED0B742A3A4533003C9E4B /* Extensions.swift in Sources */,
+				1CED0B702A3A4280003C9E4B /* ChatMessage.swift in Sources */,
 				1C33DC732A30DBA5003091FD /* FloatingTimePicker.swift in Sources */,
 				1C33DC5C2A2F7C1F003091FD /* ScrumProgressViewStyle.swift in Sources */,
 				1C33DC622A2FA253003091FD /* Location.swift in Sources */,
@@ -363,6 +391,8 @@
 				1C33DC712A30D52C003091FD /* FloatingDatePicker.swift in Sources */,
 				1C33DC602A2F931E003091FD /* ItineraryItem.swift in Sources */,
 				1CED0B6A2A3A3CB7003C9E4B /* iAgentView.swift in Sources */,
+				1CED0B6E2A3A426B003C9E4B /* ChatActor.swift in Sources */,
+				1CED0B782A3A497F003C9E4B /* MessageCardView.swift in Sources */,
 				1CED0B682A3A2C84003C9E4B /* GlobalAppState.swift in Sources */,
 				1C194A4A2A2A50EC00DBECAF /* Excursion.swift in Sources */,
 				1CCADCC72A2E74B300EE2457 /* ExcursionView.swift in Sources */,
@@ -370,8 +400,10 @@
 				1C33DC542A2F6661003091FD /* ExcursionEditView.swift in Sources */,
 				1C194A4E2A2A579A00DBECAF /* TrailingIconLabelStyle.swift in Sources */,
 				1C194A482A2A4FAB00DBECAF /* Theme.swift in Sources */,
+				1CED0B722A3A4396003C9E4B /* Conversation.swift in Sources */,
 				1CCADCC52A2E593100EE2457 /* HomeView.swift in Sources */,
 				1C194A1D2A2A497400DBECAF /* OpenAI_iOS_StarterApp.swift in Sources */,
+				1CED0B7A2A3A58AF003C9E4B /* MessageInputView.swift in Sources */,
 				1C33DC562A2F6C56003091FD /* ThemeView.swift in Sources */,
 				1C194A4C2A2A513B00DBECAF /* ExcursionCardView.swift in Sources */,
 				1C33DC6D2A30D259003091FD /* FloatingTextField.swift in Sources */,

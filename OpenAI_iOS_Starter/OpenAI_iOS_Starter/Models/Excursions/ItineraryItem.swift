@@ -9,10 +9,10 @@ import Foundation
 
 class ItineraryItem : ObservableObject, Identifiable {
     let id: UUID
-    var title: String
-    var date: Date
-    var location: Location
-    var notes: String
+    @Published var title: String
+    @Published var date: Date
+    @Published var location: Location
+    @Published var notes: String
     var theme: Theme
     var dateAsString: String {
         get {

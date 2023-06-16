@@ -9,8 +9,10 @@ import Foundation
 
 class GlobalAppState : ObservableObject {
     @Published var excursions: [Excursion]
+    @Published var conversation: Conversation
 
-    init(excursions: [Excursion] = Excursion.sampleData) {
+    init(excursions: [Excursion] = Excursion.sampleData, conversation: Conversation = Conversation.sampleData) {
             self.excursions = excursions
+            self.conversation = conversation
         }
 }

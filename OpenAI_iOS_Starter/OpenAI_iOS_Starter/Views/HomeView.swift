@@ -23,11 +23,13 @@ struct HomeView: View {
             }
             .navigationTitle("Upcoming Excursions")
             .toolbar {
+                HStack{
                     Button(action: {isPresentingEditView = true}){
                         Image(systemName: "plus")
                     }
-                NavigationLink(destination: iAgentView()){
-                    Text("iAgent")
+                    NavigationLink(destination: iAgentView()){
+                        Text("iAgent")
+                    }
                 }
             }
             .sheet(isPresented: $isPresentingEditView) {

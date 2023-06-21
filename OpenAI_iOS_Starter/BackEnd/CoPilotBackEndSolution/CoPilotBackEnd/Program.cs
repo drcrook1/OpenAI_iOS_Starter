@@ -1,6 +1,12 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using CoPilotBackEnd.Extensions;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services
+    .AddSemanticKernelOptions(builder.Configuration)
+    .AddSemanticKernelServices();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -16,7 +22,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

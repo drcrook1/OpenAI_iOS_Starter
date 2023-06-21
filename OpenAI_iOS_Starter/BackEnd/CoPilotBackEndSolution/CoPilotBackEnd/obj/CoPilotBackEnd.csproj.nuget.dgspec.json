@@ -40,11 +40,15 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.SemanticKernel": {
+              "target": "Package",
+              "version": "[0.16.230615.1-preview, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

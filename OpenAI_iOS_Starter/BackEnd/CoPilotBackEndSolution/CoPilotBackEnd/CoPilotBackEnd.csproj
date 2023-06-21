@@ -9,8 +9,24 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="0.16.230615.1-preview" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Microsoft.SemanticKernel" />
+    <None Remove="DataModels\" />
+    <None Remove="Extensions\" />
+    <None Remove="Options\" />
+    <None Remove="Skills\" />
+    <None Remove="Skills\ChatSkill\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataModels\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Options\" />
+    <Folder Include="Skills\" />
+    <Folder Include="Skills\ChatSkill\" />
+  </ItemGroup>
 </Project>

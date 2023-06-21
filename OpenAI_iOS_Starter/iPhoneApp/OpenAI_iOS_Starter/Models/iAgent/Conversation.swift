@@ -10,11 +10,6 @@ import Foundation
 struct Conversation {
     var messages: [ChatMessage]
     var date: Date
-    
-    //init(messages: [ChatMessage], date: Date){
-     //   self.messages = messages
-     //   self.date = date
-    //}
 }
 
 
@@ -53,5 +48,11 @@ extension Conversation {
 extension Conversation {
     static var empty: Conversation {
         Conversation(messages: [], date: Date.now)
+    }
+}
+
+extension Conversation {
+    mutating func appendMessage(message: ChatMessage) {
+        self.messages.append(message)
     }
 }

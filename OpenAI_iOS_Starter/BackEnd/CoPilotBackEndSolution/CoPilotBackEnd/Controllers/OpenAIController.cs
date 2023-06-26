@@ -11,13 +11,10 @@ using Microsoft.SemanticKernel.SemanticFunctions;
 
 namespace CoPilotBackEnd.Controllers
 {
+    [ApiController]
+    [Route("api/v1/[controller]")]
     public class OpenAIController : Controller
     {
-        // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         [HttpPost]
         [Route("interesting")]
@@ -41,7 +38,7 @@ namespace CoPilotBackEnd.Controllers
             string skPrompt = """
             {{$input}}
 
-            Respond to the above in a funny way that rhymes.
+            Respond to above lyrically and funny.
             """;
             var promptConfig = new PromptTemplateConfig
             {
@@ -62,6 +59,11 @@ namespace CoPilotBackEnd.Controllers
             var summaryFunction = kernel.RegisterSemanticFunction("MySkill", "Summary", functionConfig);
 
             var summary = await summaryFunction.InvokeAsync(chatRequest.request);
+
+            if (summary.ErrorOccurred)
+            {
+                return StatusCode(500, summary.LastException.Message);
+            }
 
             return Ok(new ChatResponse(summary.Result));
         }

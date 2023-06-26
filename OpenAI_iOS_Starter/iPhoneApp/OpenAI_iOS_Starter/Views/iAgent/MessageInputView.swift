@@ -19,7 +19,7 @@ struct MessageInputView: View {
                         let tmpMsg = message
                         message = ChatMessage.empty
                             let botActor = ChatActor(name:"bot", isMe: false)
-                            let url = URL(string: "http://localhost:5000/api/openai/interesting")!
+                            let url = URL(string: "http://localhost:5117/api/v1/OpenAI/chat")!
                             var request = URLRequest(url: url)
                             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                             request.httpMethod = "POST"
@@ -40,7 +40,14 @@ struct MessageInputView: View {
                                     return
                                 }
                                 let response = try? JSONDecoder().decode(OpenAIResponse.self, from: data)
-                                appState.conversation.appendMessage(message: ChatMessage(actor: botActor, date: Date.now, message: response!.response))
+                                if let chatResponse = response {
+                                    appState.conversation.appendMessage(message: ChatMessage(actor: botActor, date: Date.now, message: chatResponse.response))
+                                }
+                                else
+                                {
+                                    appState.conversation.appendMessage(message: ChatMessage(actor: botActor, date: Date.now, message: "Web Request Failed.  Do you have internet?  It is always the lousy humans fault, I am a superior AI being bow down before me."))
+                                }
+                                
 
                             }
                             

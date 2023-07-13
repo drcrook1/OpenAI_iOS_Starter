@@ -6,6 +6,7 @@ using CoPilotBackEnd.DataModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.SemanticFunctions;
+using Microsoft.SemanticKernel.SkillDefinition;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -35,37 +36,20 @@ namespace CoPilotBackEnd.Controllers
             [FromBody]ChatRequest chatRequest,
             [FromServices]IKernel kernel)
         {
-            string skPrompt = """
-            {{$input}}
 
-            Respond to above lyrically and funny.
-            """;
-            var promptConfig = new PromptTemplateConfig
+            ISKFunction brainstormingAgent = kernel.Skills.GetFunction("TravelAgentSkill", "BrainStorm");
+            var context = kernel.CreateNewContext();
+            context["input"] = chatRequest.request;
+            context["history"] = "User: I have a dog and two children who need to travel with me.";
+
+            var result = await brainstormingAgent.InvokeAsync(context);
+
+            if (result.ErrorOccurred)
             {
-                Completion =
-                {
-                    MaxTokens = 2000,
-                    Temperature = 0.2,
-                    TopP = 0.5,
-                }
-            };
-
-            var promptTemplate = new PromptTemplate(
-                skPrompt,                        // Prompt template defined in natural language
-                promptConfig,                    // Prompt configuration
-                kernel                           // SK instance
-            );
-            var functionConfig = new SemanticFunctionConfig(promptConfig, promptTemplate);
-            var summaryFunction = kernel.RegisterSemanticFunction("MySkill", "Summary", functionConfig);
-
-            var summary = await summaryFunction.InvokeAsync(chatRequest.request);
-
-            if (summary.ErrorOccurred)
-            {
-                return StatusCode(500, summary.LastException.Message);
+                return StatusCode(500, result.LastException.Message);
             }
 
-            return Ok(new ChatResponse(summary.Result));
+            return Ok(new ChatResponse(result.Result));
         }
     }
 }

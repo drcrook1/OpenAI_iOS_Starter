@@ -9,4 +9,5 @@ import Foundation
 
 struct OpenAIRequest : Codable {
     var request: String
+    var history: String
 }

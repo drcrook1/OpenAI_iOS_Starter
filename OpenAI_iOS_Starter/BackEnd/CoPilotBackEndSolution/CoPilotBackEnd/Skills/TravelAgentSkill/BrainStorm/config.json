@@ -1,0 +1,27 @@
+﻿{
+  "schema": 1,
+  "type": "completion",
+  "description": "Brainstorm Travel Ideas.",
+  "completion": {
+    "max_tokens": 2048,
+    "temperature": 0.3,
+    "top_p": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "stop_sequences": [ "##END##" ]
+  },
+  "input": {
+    "parameters": [
+      {
+        "name": "input",
+        "description": "A request to help the agent create your excursion idea.",
+        "defaultValue": ""
+      },
+      {
+        "name": "previousMessages",
+        "description": "All prior messages from this chat chain.",
+        "defaultValue": ""
+      }
+    ]
+  }
+}

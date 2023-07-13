@@ -20,13 +20,15 @@
     <None Remove="Extensions\" />
     <None Remove="Options\" />
     <None Remove="Skills\" />
-    <None Remove="Skills\ChatSkill\" />
+    <None Remove="Skills\TravelAgentSkill\" />
+    <None Remove="Skills\TravelAgentSkill\BrainStorm\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataModels\" />
     <Folder Include="Extensions\" />
     <Folder Include="Options\" />
     <Folder Include="Skills\" />
-    <Folder Include="Skills\ChatSkill\" />
+    <Folder Include="Skills\TravelAgentSkill\" />
+    <Folder Include="Skills\TravelAgentSkill\BrainStorm\" />
   </ItemGroup>
 </Project>

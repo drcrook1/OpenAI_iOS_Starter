@@ -44,3 +44,4 @@
 /Users/davidcrook/projects/OpenAI_iOS_Starter/OpenAI_iOS_Starter/BackEnd/CoPilotBackEndSolution/CoPilotBackEnd/obj/Debug/net7.0/CoPilotBackEnd.pdb
 /Users/davidcrook/projects/OpenAI_iOS_Starter/OpenAI_iOS_Starter/BackEnd/CoPilotBackEndSolution/CoPilotBackEnd/obj/Debug/net7.0/CoPilotBackEnd.genruntimeconfig.cache
 /Users/davidcrook/projects/OpenAI_iOS_Starter/OpenAI_iOS_Starter/BackEnd/CoPilotBackEndSolution/CoPilotBackEnd/obj/Debug/net7.0/ref/CoPilotBackEnd.dll
+/Users/davidcrook/projects/OpenAI_iOS_Starter/OpenAI_iOS_Starter/BackEnd/CoPilotBackEndSolution/CoPilotBackEnd/bin/Debug/net7.0/Skills/TravelAgentSkill/BrainStorm/config.json

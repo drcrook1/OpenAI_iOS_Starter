@@ -5,6 +5,7 @@ namespace CoPilotBackEnd.DataModels
 	{
 
 		public String request { get; set; }
+		public String history { get; set; }
 
 	}
 }

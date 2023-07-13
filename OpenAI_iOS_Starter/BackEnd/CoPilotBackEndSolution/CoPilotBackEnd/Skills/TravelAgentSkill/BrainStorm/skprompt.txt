@@ -1,0 +1,16 @@
+﻿[CONTEXT]
+
+previous messages:
+{{$history}}
+
+[END CONTEXT]
+
+Must: brainstorm excursion ideas and create a list using [CONTEXT] and currentMessage.
+Must: organize list by timeline
+Must: return only one list.
+Must: end list with ##END##
+Should: no more than 10 activities in the list.
+Should: at least 3 activities in the list.
+
+currentMessage:
+{{$input}}

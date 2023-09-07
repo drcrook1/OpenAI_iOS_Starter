@@ -40,7 +40,7 @@ namespace CoPilotBackEnd.Controllers
             ISKFunction brainstormingAgent = kernel.Skills.GetFunction("TravelAgentSkill", "BrainStorm");
             var context = kernel.CreateNewContext();
             context["input"] = chatRequest.request;
-            context["history"] = "User: I have a dog and two children who need to travel with me.";
+            context["history"] = chatRequest.history;
 
             var result = await brainstormingAgent.InvokeAsync(context);
 

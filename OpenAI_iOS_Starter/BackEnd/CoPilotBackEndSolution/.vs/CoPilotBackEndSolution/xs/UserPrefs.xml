@@ -1,46 +1,44 @@
-﻿<Properties StartupConfiguration="{6AE707D8-C49A-4BAF-902F-9270D8837FE0}|https" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.ItemProperties.CoPilotBackEnd PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/davidcrook/projects/OpenAI_iOS_Starter/OpenAI_iOS_Starter/BackEnd/CoPilotBackEndSolution/CoPilotBackEnd/Extensions/SemanticKernelExtensions.cs" relfile="CoPilotBackEnd/Extensions/SemanticKernelExtensions.cs" line="70" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="CoPilotBackEnd/Skills/TravelAgentSkill/BrainStorm/skprompt.txt">
+﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True" StartupConfiguration="{6AE707D8-C49A-4BAF-902F-9270D8837FE0}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CoPilotBackEnd/Program.cs">
     <Files>
-      <File FileName="CoPilotBackEnd/Controllers/OpenAIController.cs" Line="47" Column="1" />
-      <File FileName="CoPilotBackEnd/appsettings.json" Line="1" Column="1" />
-      <File FileName="CoPilotBackEnd/appsettings.Development.json" Line="4" Column="48" />
-      <File FileName="CoPilotBackEnd/Program.cs" Line="1" Column="1" />
-      <File FileName="CoPilotBackEnd/Properties/launchSettings.json" Line="7" Column="48" />
-      <File FileName="CoPilotBackEnd/Skills/TravelAgentSkill/BrainStorm/skprompt.txt" Line="9" Column="21" />
-      <File FileName="CoPilotBackEnd/Skills/TravelAgentSkill/BrainStorm/config.json" Line="11" Column="36" />
-      <File FileName="CoPilotBackEnd/Extensions/SemanticKernelExtensions.cs" Line="64" Column="66" />
-      <File FileName="CoPilotBackEnd/DataModels/ChatRequest.cs" Line="7" Column="17" />
+      <File FileName="CoPilotBackEnd/Controllers/OpenAIController.cs" Line="43" Column="53" />
+      <File FileName="CoPilotBackEnd/appsettings.json" />
+      <File FileName="CoPilotBackEnd/appsettings.Development.json" />
+      <File FileName="CoPilotBackEnd/Program.cs" Line="26" Column="1" />
+      <File FileName="CoPilotBackEnd/Properties/launchSettings.json" />
+      <File FileName="CoPilotBackEnd/Skills/TravelAgentSkill/BrainStorm/skprompt.txt" />
+      <File FileName="CoPilotBackEnd/Skills/TravelAgentSkill/BrainStorm/config.json" />
+      <File FileName="CoPilotBackEnd/Extensions/SemanticKernelExtensions.cs" />
+      <File FileName="CoPilotBackEnd/DataModels/ChatRequest.cs" />
+      <File FileName="CoPilotBackEnd/Options/AIServiceOptions.cs" Line="24" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CoPilotBackEndSolution">
-            <Node name="CoPilotBackEnd">
+            <Node name="CoPilotBackEnd" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="DataModels" expanded="True" />
-              <Node name="Extensions" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Options" expanded="True" />
               <Node name="Skills" expanded="True">
                 <Node name="TravelAgentSkill" expanded="True">
-                  <Node name="BrainStorm" expanded="True">
-                    <Node name="skprompt.txt" selected="True" />
-                  </Node>
+                  <Node name="BrainStorm" expanded="True" />
                 </Node>
               </Node>
               <Node name="appsettings.json" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/davidcrook/projects/OpenAI_iOS_Starter/OpenAI_iOS_Starter/BackEnd/CoPilotBackEndSolution/CoPilotBackEnd/Extensions/SemanticKernelExtensions.cs" relfile="CoPilotBackEnd/Extensions/SemanticKernelExtensions.cs" line="70" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CoPilotBackEnd PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

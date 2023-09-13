@@ -5,8 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services
-    .AddSemanticKernelOptions(builder.Configuration)
-    .AddSemanticKernelServices();
+    .AddAIServiceOptions(builder.Configuration)
+    .AddCoPilotService();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -29,4 +29,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-

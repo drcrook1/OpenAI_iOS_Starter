@@ -9,23 +9,16 @@ namespace CoPilotBackEnd.Extensions
 {
     internal static class SemanticKernelExtensions
     {
-        /// <summary>
-        /// Add Semantic Kernel services
-        /// </summary>
-        internal static IServiceCollection AddSemanticKernelServices(this IServiceCollection services)
+
+        internal static IKernel BuildKernel(this KernelBuilder kernelBuilder,
+            AIServiceOptions options)
         {
-            // Semantic Kernel
-            services.AddScoped<IKernel>(sp =>
-            {
-                IKernel kernel = Kernel.Builder
-                    .WithCompletionBackend(sp.GetRequiredService<IOptions<AIServiceOptions>>().Value)
-                    .Build();
-                RegisterSkillsAsync(kernel);
+            IKernel kernel = Kernel.Builder
+                .WithCompletionBackend(options)
+                .Build();
+            RegisterSkillsAsync(kernel);
 
-                return kernel;
-            });
-
-            return services;
+            return kernel;
         }
 
 
@@ -39,21 +32,6 @@ namespace CoPilotBackEnd.Extensions
             return kernelBuilder.WithAzureChatCompletionService(options.Models.Completion,
                 options.Endpoint,
                 options.APIKey);
-        }
-
-        /// <summary>
-        /// Parses the configuration into options.
-        /// </summary>
-        /// <param name="services"></param>
-        /// <param name="configuration"></param>
-        /// <returns></returns>
-        internal static IServiceCollection AddSemanticKernelOptions(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddOptions<AIServiceOptions>()
-                .Bind(configuration.GetSection(AIServiceOptions.PropertyName))
-                .ValidateOnStart()
-                .ValidateDataAnnotations();
-            return services;
         }
 
         /// <summary>

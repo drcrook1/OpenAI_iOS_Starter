@@ -8,6 +8,8 @@ obj/
 
 /*.dll
 
+*/bin/*
+
 ## User settings
 xcuserdata/
 

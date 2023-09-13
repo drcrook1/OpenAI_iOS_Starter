@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoPilotBackEnd.DataModels;
+using CoPilotBackEnd.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.Orchestration;
 using Microsoft.SemanticKernel.SemanticFunctions;
 using Microsoft.SemanticKernel.SkillDefinition;
 
@@ -18,10 +20,11 @@ namespace CoPilotBackEnd.Controllers
     {
 
         [HttpPost]
-        [Route("interesting")]
+        [Route("helloworld")]
         [Produces("application/json")]
-        public async Task<ActionResult<ChatResponse>> SayMore(ChatRequest chatRequest)
+        public async Task<ActionResult<ChatResponse>> HelloWorld([FromBody] ChatRequest chatRequest)
         {
+            //TODO: Extract All this into a Service Pattern
             ChatResponse response = await Task.Run(() =>
             {
                 return new ChatResponse(chatRequest.request + "is an interesting request.");
@@ -30,26 +33,25 @@ namespace CoPilotBackEnd.Controllers
         }
 
         [HttpPost]
-        [Route("chat")]
+        [Route("hellocopilot")]
         [Produces("application/json")]
-        public async Task<ActionResult<ChatResponse>> Chat(
-            [FromBody]ChatRequest chatRequest,
-            [FromServices]IKernel kernel)
+        public async Task<ActionResult<ChatResponse>> HelloCoPilot(
+            [FromBody] ChatRequest chatRequest,
+            [FromServices] ICoPilotService copilotService)
         {
+            ChatResponse response = await copilotService.HelloWorld(chatRequest);
+            return Ok(response);
+        }
 
-            ISKFunction brainstormingAgent = kernel.Skills.GetFunction("TravelAgentSkill", "BrainStorm");
-            var context = kernel.CreateNewContext();
-            context["input"] = chatRequest.request;
-            context["history"] = chatRequest.history;
-
-            var result = await brainstormingAgent.InvokeAsync(context);
-
-            if (result.ErrorOccurred)
-            {
-                return StatusCode(500, result.LastException.Message);
-            }
-
-            return Ok(new ChatResponse(result.Result));
+        [HttpPost]
+        [Route("brainstorm")]
+        [Produces("application/json")]
+        public async Task<ActionResult<ChatResponse>> Brainstorm(
+            [FromBody]ChatRequest chatRequest,
+            [FromServices]ICoPilotService copilotService)
+        {
+            ChatResponse response = await copilotService.Brainstorm(chatRequest);
+            return Ok(response);
         }
     }
 }

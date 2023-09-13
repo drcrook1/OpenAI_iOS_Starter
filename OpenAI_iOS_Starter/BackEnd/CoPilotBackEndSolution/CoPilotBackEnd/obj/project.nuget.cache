@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "X7KXNY14PBP2BtMdGn2+NJtHauuddmlGC1ooHdShfh1uoAakP2CaaGsWP0q80yZLfebTCdYqXq7RcsH2pZZiwQ==",
+  "dgSpecHash": "geMmrJ1I/0VEe6992NVUl983pleX5ZPMTN8r9SKb45cC8XCHMgVe0cTyZtN2r/whxArLxK7Y7FPIQRZE3QF9QA==",
   "success": true,
   "projectFilePath": "/Users/davidcrook/projects/OpenAI_iOS_Starter/OpenAI_iOS_Starter/BackEnd/CoPilotBackEndSolution/CoPilotBackEnd/CoPilotBackEnd.csproj",
   "expectedPackageFiles": [

@@ -7,3 +7,5 @@ The tutorials are broken into several folders.
 iPhoneApp is an iPhone interface that can pair with any of the backends.
 
 Each parent folder will contain a Tutorial.md file. Those files are the tutorials appropriate to each level.
+
+TODO: Build an article for unit testing and Mocks/Fakes type testing of Semantic Kernel & OpenAI.

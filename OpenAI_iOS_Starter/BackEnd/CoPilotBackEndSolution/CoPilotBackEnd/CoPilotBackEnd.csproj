@@ -22,6 +22,7 @@
     <None Remove="Skills\" />
     <None Remove="Skills\TravelAgentSkill\" />
     <None Remove="Skills\TravelAgentSkill\BrainStorm\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataModels\" />
@@ -30,5 +31,6 @@
     <Folder Include="Skills\" />
     <Folder Include="Skills\TravelAgentSkill\" />
     <Folder Include="Skills\TravelAgentSkill\BrainStorm\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

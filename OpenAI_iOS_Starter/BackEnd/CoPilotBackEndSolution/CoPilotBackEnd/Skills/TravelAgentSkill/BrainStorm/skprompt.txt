@@ -3,6 +3,9 @@
 previous messages:
 {{$history}}
 
+Additional data for more refined answers:
+{{$additionaldata}}
+
 [END CONTEXT]
 
 Must: brainstorm excursion ideas and create a list using [CONTEXT] and currentMessage.
